@@ -21,3 +21,6 @@
  2. 사원(Employee)
  
  3. 예약(Reservationn)
+
+API 로직
+ Controller -> Service -> Repository -> Service -> Controller
