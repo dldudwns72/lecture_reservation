@@ -51,6 +51,8 @@ public class LectureServiceImpl implements LectureService {
                     .isView(lecture.isView())
                     .build();
 
+            // View 상태 업데이트
+            lectureRepository.save(lecture);
             responses.add(response);
         }
 
