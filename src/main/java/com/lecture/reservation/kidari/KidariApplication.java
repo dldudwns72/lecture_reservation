@@ -38,7 +38,7 @@ public class KidariApplication {
 				.hall("3강연장")
 				.content("문학에 대한 전반적인 이해")
 				.numberOfAdmissions(10)
-				.startDate(LocalDateTime.of(2022,7,1,15,30))
+				.startDate(LocalDateTime.of(2022,7,4,15,30))
 				.build();
 
 		Lecture MathLecture = Lecture.builder()
@@ -50,8 +50,18 @@ public class KidariApplication {
 				.startDate(LocalDateTime.of(2022,6,10,15,30))
 				.build();
 
+		Lecture BeautyLecture = Lecture.builder()
+				.title("미용 강연")
+				.lecturer("이뷰티")
+				.hall("중앙홀")
+				.content("뷰티의 강연")
+				.numberOfAdmissions(5)
+				.startDate(LocalDateTime.of(2022,7,5,15,30))
+				.build();
+
 		lectureRepository.save(LiteratureLecture);
 		lectureRepository.save(MathLecture);
+		lectureRepository.save(BeautyLecture);
 
 		Employee employeeEntity = Employee.builder()
 				.name("이영준")
