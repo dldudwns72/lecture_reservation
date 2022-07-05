@@ -62,8 +62,8 @@ public class ReservationServiceImpl implements ReservationService {
 
         findAll.stream().forEach((reservation -> {
             Lecture lecture = reservation.getLecture();
-            reservation.getLecture().checkViewing(LocalDateTime.now());
-            reservation.getLecture().checkFinishReservation();
+            lecture.checkViewing(LocalDateTime.now());
+            lecture.checkFinishReservation();
 
             LectureDTO lectureDTO = LectureDTO.builder()
                     .no(lecture.getNo())
