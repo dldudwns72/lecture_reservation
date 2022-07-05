@@ -24,9 +24,9 @@ public class LectureController {
         return lectureService.getLectures();
     }
 
-    @GetMapping(value = "/lectures/{no}")
-    public LectureDTO getLectures(@PathVariable Long no){
-        return lectureService.getLecture(no);
+    @GetMapping(value = "/lectures/{lectureNo}")
+    public LectureDTO getLectures(@PathVariable Long lectureNo){
+        return lectureService.getLecture(lectureNo);
     }
 
 }

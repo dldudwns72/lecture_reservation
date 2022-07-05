@@ -15,8 +15,9 @@ public class ReservationController {
     private final ReservationService reservationService;
 
     @PostMapping("/reservations/{lectureNo}/{employeeNo}")
-    public void makeReservation(@PathVariable Long lectureNo, @PathVariable Long employeeNo){
-        reservationService.makeReservation(lectureNo,employeeNo);
+    public void makeReservation(@PathVariable Long lectureNo, @PathVariable String employeeNo){
+        Long convertToLongType =  Long.parseLong(employeeNo);
+        reservationService.makeReservation(lectureNo,convertToLongType);
     }
 
     @GetMapping("reservations")
